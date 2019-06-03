@@ -15,6 +15,12 @@ e analisar meta-dados que estão disponíveis no site do governo(sobre o tema on
 <br/>
 <br/>
 <strong>Como baixar e executar o projeto?</strong>
+Clone o repositório ou baixa e extraia o projeto.
+No terminal e na pasta do projeto ("CancerData") execute os comandos: 
+<br>pip install virtualenv 
+<br>virtualenv venv
+<br>depois execute venv\Scripts\activate se você estiver utilizando Windows e venv\bin\activate se for linux
+<br>E execute o comando venv\bin\pip3 install -r requirements.txt            se estiver no linux para baixar todas as bibliotecas necessárias do projeto. *se estiver no windows executar venv\Scripts\pip3 install -r requirements.txt
 <br/>
 <br/>
 <strong>Colaboradores do projeto:</strong>
