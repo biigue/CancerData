@@ -8,19 +8,24 @@ Projeto desenvolvido e lançado na disciplina de Projeto de Banco de dados do cu
 e analisar meta-dados que estão disponíveis no site do governo(sobre o tema oncologia). 
 <br/>
 <br/>
-<strong>Como é organizado a análise sobre esses dados?:</strong>As informações filtradas foram colocadas de forma a serem analisadas em gráficos e filtros.
+<strong>Como é organizado a análise sobre esses dados? :</strong>As informações filtradas foram colocadas de forma a serem analisadas em gráficos e filtros.
 <br/>
 <br/>
-<strong>Tecnologias sendo utilizadas nesse projeto:</strong>No momento está sendo desenvolvido com o framework Flask e integrando com o banco MySQL.
+<strong>Tecnologias sendo utilizadas nesse projeto :</strong>No momento está sendo desenvolvido com o framework Flask, integrando com o banco MySQL e utilizando bibliotecas como pandas e matplotlib.
 <br/>
 <br/>
 <strong>Como baixar e executar o projeto?</strong>
-Clone o repositório ou baixa e extraia o projeto.
+Clone o repositório ou baixe e extraia o projeto.
+<br/>
 No terminal e na pasta do projeto ("CancerData") execute os comandos: 
-<br>pip install virtualenv 
-<br>virtualenv venv
-<br>depois execute venv\Scripts\activate se você estiver utilizando Windows e venv\bin\activate se for linux
-<br>E execute o comando venv\bin\pip3 install -r requirements.txt            se estiver no linux para baixar todas as bibliotecas necessárias do projeto. *se estiver no windows executar venv\Scripts\pip3 install -r requirements.txt
+<ul>
+  <li>pip install virtualenv </li>
+  <li>virtualenv venv</li>
+  <li>depois execute <strong>venv\Scripts\activate</strong> se você estiver utilizando Windows e <strong>venv\bin\activate</strong> se for linux </li>
+  <li>E execute o comando <strong>venv\bin\pip3 install -r requirements.txt </strong> se estiver no linux para baixar todas as bibliotecas necessárias do projeto. *se estiver no windows executar <strong>venv\Scripts\pip3 install -r requirements.txt</strong></li>
+  <li>python run.py</li>
+</ul>
+Após isso, abra a porta que foi aberta no navegador
 <br/>
 <br/>
 <strong>Colaboradores do projeto:</strong>
