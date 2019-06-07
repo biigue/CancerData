@@ -19,12 +19,12 @@ Clone o repositório ou baixe e extraia o projeto.
 <br/>
 No terminal e na pasta do projeto ("CancerData") execute os comandos: 
 <ul>
-  <li>pip install virtualenv </li>
-  <li>virtualenv venv</li>
+  <li>pip install virtualenv (obs:só precisa digitar esse comando quando o repositório acabou de ser clonado) </li>
+  <li>virtualenv venv (obs:só precisa digitar esse comando quando o repositório acabou de ser clonado)</li>
   <li>depois execute <strong>venv\Scripts\activate</strong> se você estiver utilizando Windows e <strong>venv\bin\activate</strong> se for linux </li>
   <li>** Caso tenha erro de scripts não carregados porque a execução de scripts foi desabilitada do sistema, abrir o <strong> cmdlets e utilizar o comando Set-ExecutionPolicy,</strong> e depois utlizar o comando <strong>RemoteSigned</strong> ou <strong>Unrestricted</strong></li>
   <li>E execute o comando <strong>venv\bin\pip3 install -r requirements.txt </strong> se estiver no linux para baixar todas as bibliotecas necessárias do projeto. *se estiver no windows executar <strong>venv\Scripts\pip3 install -r requirements.txt</strong></li>
-  <li>python run.py</li>
+  <li>python app.py</li>
 </ul>
 Após isso, abra a porta que foi aberta no navegador
 <br/>
