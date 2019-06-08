@@ -1,2 +1,0 @@
-class Ano(db.Model):
-    

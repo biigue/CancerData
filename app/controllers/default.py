@@ -1,10 +1,14 @@
-from flask import render_template
-from app import app
+from flask import render_template, redirect, url_for
+from app import app #, db
 
 #Toda vez que criar um a página tem que adicionar a rota aqui
 @app.route('/')
 def Index():
     return render_template('index.html')
+
+@app.errorhandler(404)
+def not_found():
+    return render_template('404.html'),404
 
 @app.route('/mamografos')
 def mamografos():
