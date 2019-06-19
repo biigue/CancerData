@@ -1,16 +1,42 @@
-class Cidade(db.Model):
+class CidadeObj(db.Model):
+    def __init__(self):
+        self.idCidade = None
+        self.nome = None
+        self.latitude = None
+        self.longitude = None
+        self.Estado_idEstado = None
 
-    __tablename__ = "cidade"
+    def get_idCidade(self):
+        return self.idCidade
 
-    id = db.Column(db.Integer, primary_key=True, nullable=False)
-    nome = db.Column(db.String(45), nullable=False)
-    latitudeELongitude = db.Column(db.String(45), nullable=False)
+    def set_idCidade(self, idCidade) :
+        self.idCidade = idCidade
 
-    def __init__(self, id, nome, latitudeELongitude):
-        self.id = id
+    def get_nome(self):
+        return self.nome
+    
+    def set_nome(self, nome) :
         self.nome = nome
-        self.latitudeELongitude = latitudeELongitude
+
+    def get_latitude(self):
+        return self.latitude
     
+    def set_latitude(self, latitude) :
+        self.latitude = latitude
+
+    def get_longitude(self):
+        return self.longitude
     
+    def set_longitude(self, longitude) :
+        self.longitude = longitude
+
+    def get_Estado_idEstado(self):
+        return self.Estado_idEstado
+    
+    def set_Estado_idEstado(self, Estado_idEstado) :
+        self.Estado_idEstado = Estado_idEstado
+
+
+
 
 

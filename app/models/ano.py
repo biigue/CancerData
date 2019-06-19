@@ -1,8 +1,7 @@
-class LocationObj:
+class AnoObj:
     def __init__(self):
         self.Ano =  None
         self.idAno = None
-
 
     def get_Ano(self):
         return self.Ano
