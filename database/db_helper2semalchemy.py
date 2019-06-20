@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import pymysql
+
 app = Flask(__name__)
 class Database:
     def __init__(self):

@@ -62,28 +62,3 @@ class RazaoDeExames(Base):
     data = Column("data", String(254), nullable=False)
     TipoDeExame_idTipoDeExame=  Colum("TipoDeExame_idTipoDeExame", Integer, nullable= False, ForeignKey(TipoDeExame.idTipoDeExame))
     Cidade_idCidade = Colum("Cidade_idCidade", Integer, nullable= False, ForeignKey(Cidade.Cidade_idCidade))
-    
-def get_engine():
-    
-    user = "root"
-    password = ""
-    address = "localhost"
-    database_name = "bd_oncologia"
-    engine = create_engine('mysql+pymysql://%s:%s@%s/%s' % (user, password, address, database_name), echo=True)
-
-    return engine
-
-
-def get_session():
-    engine = get_engine()
-    return sessionmaker(bind=engine)
-
-
-def init(drop_tables=False):
-    engine = get_engine()
-    if not database_exists(engine.url):
-        create_database(engine.url)
-    if drop_tables:
-        Base.metadata.drop_all(bind=engine)
-    Base.metadata.create_all(bind=engine)
-    return sessionmaker(bind=engine)
