@@ -13,7 +13,7 @@ class Connection:
             "root", #"db_user"
             "", #db_pass
             "localhost", #db_host
-            #"db_port", #db_port
+            "3306", #db_port
             "bd_oncologia"  #db_name
         )
  
