@@ -1,6 +1,7 @@
 from flask import render_template, redirect, url_for
-from app import app #, db
+from app import app, db
 from app.analise.mapGenerator import generateMap
+from app.models.tables import *
 import os
 
 #Toda vez que criar um a página tem que adicionar a rota aqui
