@@ -1,5 +1,7 @@
 from flask import render_template, redirect, url_for
 from app import app #, db
+from app.analise.mapGenerator import generateMap
+import os
 
 #Toda vez que criar um a página tem que adicionar a rota aqui
 @app.route('/')
@@ -37,3 +39,27 @@ def mapaDeCalor2():
 @app.route('/criadores')
 def criadores():
     return render_template('criadores.html')
+
+@app.route("/choroplethgeral")
+def choroplethGeral():
+    if os.path.isfile("app/templates/mapa-all.html"):
+        return render_template("mapa-all.html")
+    else:
+        generateMap()
+        return render_template("mapa-all.html")
+
+@app.route("/choroplethcolodeutero")
+def choroplethColoDeUtero():
+    if os.path.isfile("app/templates/mapa-citopatologico.html"):
+        return render_template("mapa-citopatologico.html")
+    else:
+        generateMap("citopatologico")
+        return render_template("mapa-citopatologico.html")
+
+@app.route("/choroplethmamografia")
+def choroplethMamografia():
+    if os.path.isfile("app/templates/mapa-mamografia.html"):
+        return render_template("mapa-mamografia.html")
+    else:
+        generateMap("mamografia")
+        return render_template("mapa-mamografia.html")

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
-
+<a href="{{ url_for('choroplethGeral') }}">Choropleth com a razão de exames de todos os tipos de cancêr</a><br>
+<a href="{{ url_for('choroplethColoDeUtero') }}">Choropleth com a razão de exames citopatológicos de colo de útero</a><br>
+<a href="{{ url_for('choroplethMamografia') }}">Choropleth com a razão de exames de mamografia</a>
 {% endblock %}
