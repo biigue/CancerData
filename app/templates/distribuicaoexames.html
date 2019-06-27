@@ -1,5 +1,34 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
+    <div class="row">
+    <div class="col-md-3">
+    <div class="indice">
+    <h2>Tipos de Exames</h2>
+    <li><a href="#1">Exames relacionados à oncologia realizados por estado</a></li>
+    <li><a href="#2">Número de exames relacionados à oncologia divididos por estado?</a></li>
+    <li><a href="#3">Distribuição de exames relacionados à oncologia realizados por região no Brasil</a></li>
+    <p class="cc">
+            <a href="#">Voltar ao Topo</a>
+          </p>
+    </div>
+    </div>
+    <div class="col-md-8">
+    <div class="images">
+    <figure id="1"><img src="static/imagens/exames_grafico_barra_qtd_exames_realizados.png"></figure>
+    <figure id="2"><img src="static/imagens/exames/exames_grafico_barra_qtd_exames_por_estado.png"></figure>
+    <figure id="3"><img src="static/imagens/exames/exames_grafico_pizza_oncologia_por_regiao.png"></figure>
+    </div>
+    </div></div></div>
+    
+    <script type="text/javascript">
+    function abreJanela(URL) {
+    location.href = URL;
+    }
+    </script>
+    
+    
+   
 
 
 {% endblock %}

@@ -104,7 +104,7 @@ def grafico_barra_qtd_exames_por_estado():
     autolabel(rects1)
     autolabel(rects2)
 
-    #plt.show()
+    #pyplot.show()
     pyplot.savefig('graficos\exames_grafico_barra_qtd_exames_por_estado.png')
 
 def grafico_pizza_oncologia_por_regiao():
@@ -143,7 +143,7 @@ def grafico_pizza_oncologia_por_regiao():
     divisao = [
         ['AM', 'RR', 'AP', 'PA', 'TO', 'RO', 'AC'],
         ['MA', 'PI', 'CE', 'RN', 'PE', 'PB', 'SE', 'AL', 'BA'],
-        ['MT', 'MS', 'GO', 'DF'],
+        ['MT', 'MS', 'GO'],
         ['SP', 'RJ', 'ES', 'MG'],
         ['PR', 'RS', 'SC']
     ]
@@ -162,9 +162,9 @@ def grafico_pizza_oncologia_por_regiao():
     pyplot.pie(valoresPorRegiao, labels=regioes, autopct='%1.1f%%')
 
     pyplot.title('Distribuição do total de exames relacionados à oncologia realizados por região do Brasil')
-    #plt.show()
+    #pyplot.show()
     pyplot.savefig('graficos\exames_grafico_pizza_oncologia_por_regiao.png')
 
-
-
+grafico_barra_qtd_exames_por_estado()
+grafico_barra_qtd_exames_realizados()
 grafico_pizza_oncologia_por_regiao()
