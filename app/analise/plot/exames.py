@@ -90,7 +90,9 @@ def grafico_barra_qtd_exames_por_estado():
 
     rects2 = ax.bar(ind + width, mamografia, width, color='g')
 
-    ax.set_ylabel('Scores')
+    ax.set_ylabel('Taxa')
+    pyplot.xlabel('Estados')
+    pyplot.title('Número de exames por estado')
     ax.set_xticks(ind + width)
     ax.set_xticklabels(tuple(siglaMain))
     ax.legend((rects1[0], rects2[0]), ('Citopatologico', 'Mamografia'))
