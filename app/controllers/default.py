@@ -26,7 +26,7 @@ def mortalidade():
 def tiposExames():
     return render_template('tiposexames.html')
 
-@app.route('/mapadecalor1')
+@app.route('/choropleth')
 def mapaDeCalor1():
     return render_template('mapadecalor1.html')
 
@@ -37,3 +37,15 @@ def mapaDeCalor2():
 @app.route('/criadores')
 def criadores():
     return render_template('criadores.html')
+
+@app.route("/choroplethgeral")
+def choroplethGeral():
+    return render_template("mapa-all.html")
+
+@app.route("/choroplethcolodeutero")
+def choroplethColoDeUtero():
+    return render_template("mapa-citopatologico.html")
+
+@app.route("/choroplethmamografia")
+def choroplethMamografia():
+    return render_template("mapa-mamografia.html")
