@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <p>A razão de exames é uma nota gerada para as cidades de acordo com a quantidade de exames realizados dividido pela quantidade de mulheres que vivem na região.</p>
+<p>Os mapas abaixo foram gerados por estado.</p>
 <a href="{{ url_for('choroplethGeral') }}">Razão de exames de todos os tipos de cancêr</a><br>
 <a href="{{ url_for('choroplethColoDeUtero') }}">Razão de exames citopatológicos de colo de útero</a><br>
 <a href="{{ url_for('choroplethMamografia') }}">Razão de exames de mamografia</a>
