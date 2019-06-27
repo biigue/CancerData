@@ -1,5 +1,89 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<div class="indice">
+<h2>Mamógrafos</h2>
+<li><a href="#1">Quantos mamógrafos existem em cada estado do Brasil</a></li>
+<li><a href="#2">Como estão distribuídos os mamógrafos em relação às regiões do Brasil?</a></li>
+<li><a href="#3">Como estão distribuídos os mamógrafos do SUS em relação às regiões do Brasil?</a></li>
+<li><a href="#4">Como estão distribuídos os mamógrafos da Rede Privada em relação às regiões do Brasil?</a></li>
+<li><a href="#5">Como estão distribuídos os mamógrafos em relação ao SUS e à rede privada de saúde no Brasil?</a></li>
+<li><a href="#AL">Distribuição de mamógrafos em relação ao SUS e à Rede Privada de saúde no estado:</a></li>
+<select name="paginas" onchange="javascript: abreJanela(this.value)">
+<option value="#1">Estados</option>
+<option value="#AC">Acre</option>
+<option value="#AL">Alagoas</option>
+<option value="#AP">Amapá</option>
+<option value="#AM">Amazonas</option>
+<option value="#BA">Bahia</option>
+<option value="#CE">Ceará</option>
+<option value="#DF">Distrito Federal</option>
+<option value="#ES">Espírito Santo</option>
+<option value="#MA">Maranhão</option>
+<option value="#MT">Mato Grosso</option>
+<option value="#MS">Mato Grosso do Sul</option>
+<option value="#MG">Minas Gerais</option>
+<option value="#PA">Pará</option>
+<option value="#PB">Paraíba</option>
+<option value="#PE">Pernambuco</option>
+<option value="#PI">Piauí</option>
+<option value="#RJ">Rio de Janeiro</option>
+<option value="#RN">Rio Grande do Norte</option>
+<option value="#RS">Rio Grande do Sul</option>
+<option value="#RO">Rondônia</option>
+<option value="#RR">Roraima</option>
+<option value="#SC">Santa Catarina</option>
+<option value="#SP">São Paulo</option>
+<option value="#SE">Sergipe</option>
+<option value="#TO">Tocantins</option>
+</select><br>
+<p class="cc">
+        <a href="#">Voltar ao Topo</a>
+      </p>
+</div>
+</div>
+<div class="col-md-8">
+<div class="images">
+<figure id="1"><img src="static/imagens/mamografos/mamografos-barra-estado.png"></figure>
+<figure id="2"><img src="static/imagens/mamografos/mamografos-total-regiao.png"></figure>
+<figure id="3"><img src="static/imagens/mamografos/mamografos-total-sus-regiao.png"></figure>
+<figure id="4"><img src="static/imagens/mamografos/mamografos-total-nsus-regiao.png"></figure>
+<figure id="5"><img src="static/imagens/mamografos/mamografos-razao-sus-nsus.png"></figure>
+<figure id="AC"><img src="static/imagens/mamografos/AC.png"></figure>
+<figure id="AL"><img src="static/imagens/mamografos/AL.png"></figure>
+<figure id="AP"><img src="static/imagens/mamografos/AP.png"></figure>
+<figure id="AM"><img src="static/imagens/mamografos/AM.png"></figure>
+<figure id="BA"><img src="static/imagens/mamografos/BA.png"></figure>
+<figure id="CE"><img src="static/imagens/mamografos/CE.png"></figure>
+<figure id="DF"><img src="static/imagens/mamografos/DF.png"></figure>
+<figure id="ES"><img src="static/imagens/mamografos/ES.png"></figure>
+<figure id="MA"><img src="static/imagens/mamografos/MA.png"></figure>
+<figure id="MT"><img src="static/imagens/mamografos/MT.png"></figure>
+<figure id="MS"><img src="static/imagens/mamografos/MS.png"></figure>
+<figure id="MG"><img src="static/imagens/mamografos/MG.png"></figure>
+<figure id="PA"><img src="static/imagens/mamografos/PA.png"></figure>
+<figure id="PB"><img src="static/imagens/mamografos/PB.png"></figure>
+<figure id="PE"><img src="static/imagens/mamografos/PE.png"></figure>
+<figure id="PI"><img src="static/imagens/mamografos/PI.png"></figure>
+<figure id="RJ"><img src="static/imagens/mamografos/RJ.png"></figure>
+<figure id="RN"><img src="static/imagens/mamografos/RN.png"></figure>
+<figure id="RS"><img src="static/imagens/mamografos/RS.png"></figure>
+<figure id="RO"><img src="static/imagens/mamografos/RO.png"></figure>
+<figure id="RR"><img src="static/imagens/mamografos/RR.png"></figure>
+<figure id="SC"><img src="static/imagens/mamografos/SC.png"></figure>
+<figure id="SP"><img src="static/imagens/mamografos/SP.png"></figure>
+<figure id="SE"><img src="static/imagens/mamografos/SE.png"></figure>
+<figure id="TO"><img src="static/imagens/mamografos/TO.png"></figure>
+</div>
+</div></div></div>
+
+<script type="text/javascript">
+function abreJanela(URL) {
+location.href = URL;
+}
+</script>
 
 
 {% endblock %}
