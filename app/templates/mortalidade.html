@@ -1,5 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<div class="indice">
+<h2>Mortalidade</h2>
+<ul>
+    <li><a href="#1">Mortalidade referente a cada tipo de câncer</a></li>
+    <li><a href="#2">Número de mortos por tipo de câncer e faixas etárias</a></li> 
+    <li><a href="#AL">Distribuição de mamógrafos em relação ao SUS e à Rede Privada de saúde no estado:</a></li>
+</ul>
+<select name="paginas" onchange="javascript: abreJanela(this.value)">
+<option value="#1">Câncer</option>
+<option value="#AC">Acre</option>
+<option value="#AL">Alagoas</option>
+
+</select><br>
+<p class="cc">
+        <a href="#">Voltar ao Topo</a>
+      </p>
+</div>
+</div>
+<div class="col-md-8">
+<div class="images">
+<figure id="1"><img src="static\imagens\mortalidade\mortalidadeportiposdecancerall.png"></figure>
+<figure id="2"><img src="static/imagens/mamografos/mamografos-total-regiao.png"></figure>
+<figure id="AL"><img src="static/imagens/mamografos/AL.png"></figure>
+
+
+
+</div>
+</div></div></div>
+
+<script type="text/javascript">
+function abreJanela(URL) {
+location.href = URL;
+}
+</script>
 
 
 {% endblock %}
