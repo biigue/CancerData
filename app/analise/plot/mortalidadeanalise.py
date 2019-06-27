@@ -30,6 +30,7 @@ def gerar_grafico_mortalidade_todos_tipos_cancer_total(engine):
 
     plt.savefig("../../static/imagens/mortalidade/mortalidadeportiposdecancerall.png", bbox_inches='tight')
 
+#errado aq embaixo
 def gerar_grafico_mortalidade_tipos_cancer_por_ano_pizza(engine,anoEscolhido):
     #result = pd.read_sql_query("SELECT tipoDeCancer,count(*)tipoDeCancer FROM mortalidade GROUP BY tipoDeCancer ;", engine)
     # Pie chart, where the slices will be ordered and plotted counter-clockwise:
@@ -43,10 +44,20 @@ def gerar_grafico_mortalidade_tipos_cancer_por_ano_pizza(engine,anoEscolhido):
     ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
     plt.show()
+
+    result = pd.read_sql_query("SELECT tipoDeCancer,numeroDeCasos FROM mortalidade GROUP BY tipoDeCancer  ;", engine , index_col=["tipoDeCancer"])
+    my_df = pd.DataFrame.from_dict(result)
+    my_df = my_df.sort_values('tipoDeCancer', ascending=False).head(6)
+    plt.ylabel("Numero de mortes")
+    plt.xlabel("Tipo de câncer")
+    my_df.plot(kind='pie' ,title="mortalidades por tipo de cancer de todos os anos disponiveis(2000 a 2015) e de todas as faixas etárias",figsize=(6, 5))
+
+    plt.savefig("../../static/imagens/mortalidade/mortalidadeportiposdecancerallpizza.png", bbox_inches='tight')
+    plt.show()
     
 
 def mortalidade_tipocancer_todasdatas_todas_faixasetarias(tipoCancer,engine):
-    result = pd.read_sql_query("SELECT tipoDeCancer,numeroDeCasos,raca FROM mortalidade aaaaaa GROUP BY raca ;", engine, index_col=["FaixaEtaria"])
+    result = pd.read_sql_query("SELECT tipoDeCancer,numeroDeCasos,raca FROM mortalidade WHERE tipoDeCancer="+'"'+(tipoCancer)+ '"'+" " + "GROUP BY raca ;", engine, index_col=["FaixaEtaria"])
     my_df = pd.DataFrame.from_dict(result)
     plt.ylabel("Numero de mortes")
     plt.xlabel("Faixa etária")
@@ -84,8 +95,9 @@ def mortos_pelo_tipo_escolhido_cancer_racas_diferentes_intervalo_anos(tipoCancer
 
 
 gerar_grafico_mortalidade_todos_tipos_cancer_total(engine)
-gerar_grafico_mortalidade_tipos_cancer_por_ano_pizza(engine,2000)
-#mortalidade_tipocancer_intervalodata_todas_faixasetarias(engine,inicioAno,fimAno)
+#gerar_grafico_mortalidade_tipos_cancer_por_ano_pizza(engine,2000)
 #mortalidade_tipocancer_todasdatas_todas_faixasetarias("mama",engine)
+#mortalidade_tipocancer_todasdatas_todas_faixasetarias("colo",engine)
+#mortalidade_tipocancer_intervalodata_todas_faixasetarias(engine,inicioAno,fimAno)
 #mortos_pelo_tipo_escolhido_cancer_racas_diferentes_intervalo_anos("colo",2000,2015)
 
